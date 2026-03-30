@@ -1,3 +1,7 @@
+import hero1 from '../images/hero1.JPG';
+import hero2 from '../images/hero2.JPG';
+
+
 const s = {
   section: {
     height: '100vh', display: 'grid', gridTemplateColumns: '1fr 1fr',
@@ -104,15 +108,15 @@ export default function Hero() {
   return (
     <section id="home" style={s.section}>
       <div style={s.left}>
-        <p style={s.label}>✦ Visual Storytelling Studio</p>
+        <p style={s.label}>✦ Visual Storytelling Photography</p>
         <h1 style={s.title}>
           We Shoot<br />
           <em style={s.titleEm}>Stories,</em>
           Not Just<br />Moments
         </h1>
         <p style={s.desc}>
-          Award-winning photography studio crafting timeless images for brands,
-          individuals, and events. Every frame is intentional.
+          Trusted photography studio crafting timeless images for Weddings,
+          individuals, and all kind of events. Every frame is intentional.
         </p>
         <div style={s.actions}>
           <a
@@ -136,25 +140,16 @@ export default function Hero() {
 
       <div style={s.right}>
         <div style={s.imgGrid}>
-          <div style={s.imgBlock1}>
-            <div style={s.placeholder}>
-              <CameraIcon />
-              <span style={s.placeholderText}>Add your hero image</span>
-            </div>
+          <div style={s.imgBlock1}>            
+            <img src={hero1} alt="Hero" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           </div>
-          <div style={s.imgBlock2}>
-            <div style={s.placeholder}>
-              <ImageIcon />
-              <span style={s.placeholderText}>Add your portfolio image</span>
-            </div>
+          <div style={s.imgBlock2}>            
+            <img src={hero2} alt="Hero" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           </div>
         </div>
       </div>
 
-      <div style={s.scroll}>
-        <div style={s.scrollLine} />
-        <span style={s.scrollText}>Scroll</span>
-      </div>
+     
     </section>
   );
 }

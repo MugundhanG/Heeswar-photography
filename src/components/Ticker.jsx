@@ -1,12 +1,10 @@
 const items = [
-  'Portrait Photography', '✦', 'Wedding & Events', '✦',
-  'Product & Commercial', '✦', 'Editorial & Fashion', '✦',
-  'Corporate & Brand', '✦', 'Architecture & Interiors', '✦',
-];
+  'Portrait Photography', '✦', 'Wedding & Reception', '✦', 'Birthday Shoots', '✦', 'All traditional and corporate events', '✦',
+  'Commercial Photography', '✦', ];
 
 const s = {
   ticker: { background: 'var(--gold)', padding: '14px 0', overflow: 'hidden', whiteSpace: 'nowrap' },
-  inner: { display: 'inline-flex', animation: 'ticker 20s linear infinite' },
+  inner: { display: 'inline-flex', animation: 'ticker 20s linear infinite', willChange: 'transform' },
   item: {
     fontFamily: 'var(--font-display)', fontSize: '1rem',
     letterSpacing: '0.15em', color: 'var(--black)', padding: '0 48px',
@@ -15,7 +13,7 @@ const s = {
 };
 
 export default function Ticker() {
-  const doubled = [...items, ...items];
+  const doubled = [...items, ...items, ...items];
   return (
     <div style={s.ticker} aria-hidden="true">
       <div style={s.inner}>

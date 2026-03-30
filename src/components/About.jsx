@@ -1,3 +1,6 @@
+import aboutMain from '../images/about-main.JPG';
+import aboutAccent from '../images/about-accent.JPG';
+
 const s = {
   section: {
     display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80,
@@ -48,53 +51,39 @@ const s = {
 };
 
 const stats = [
-  { num: '1200+', label: 'Projects Delivered' },
+  { num: '500+', label: 'Projects Delivered' },
   { num: '98%',   label: 'Client Satisfaction' },
-  { num: '40+',   label: 'Awards Won' },
+  { num: '100000+',   label: 'Images Captured' },
 ];
 
 export default function About() {
   return (
     <section id="about" style={s.section}>
       <div style={s.visual}>
-        <div style={s.imgMain}>
-          <div style={{ opacity: 0.2, display: 'flex', flexDirection: 'column', gap: 8, alignItems: 'center' }}>
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" strokeWidth="1">
-              <circle cx="12" cy="12" r="4"/>
-              <path d="M20 9V7a2 2 0 0 0-2-2h-1l-1-2H8L7 5H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/>
-            </svg>
-            <span style={{ fontSize: '0.6rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--gold)', fontFamily: 'var(--font-body)' }}>
-              Your photo here
-            </span>
-          </div>
+        <div style={s.imgMain}>          
+           <img src={aboutMain} alt="Studio" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
         </div>
-        <div style={s.imgAccent}>
-          <div style={{ opacity: 0.15 }}>
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" strokeWidth="1">
-              <rect x="3" y="3" width="18" height="18" rx="2"/>
-              <circle cx="8.5" cy="8.5" r="1.5"/>
-              <path d="m21 15-5-5L5 21"/>
-            </svg>
-          </div>
+        <div style={s.imgAccent}>        
+          <img src={aboutAccent} alt="Detail" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
         </div>
         <div style={s.badge}>
-          <span style={s.badgeNum}>8+</span>
+          <span style={s.badgeNum}>5+</span>
           <span style={s.badgeLbl}>Years of<br />Excellence</span>
         </div>
       </div>
 
       <div style={s.content}>
-        <p style={s.label}>✦ About the Studio</p>
+        <p style={s.label}>✦ About the Photography</p>
         <h2 style={s.title}>
           Passion Meets<br />
           <em style={s.titleEm}>Precision</em>
         </h2>
         <p style={s.text}>
-          At <strong style={{ color: 'var(--white)', fontWeight: 500 }}>LENZ Studio</strong>, we believe every great photograph is a conversation between light, emotion, and intention.
+          At <strong style={{ color: 'var(--white)', fontWeight: 500 }}>Heeswar Photography</strong>, we believe every great photograph is a conversation between light, emotion, and intention.
           Founded on a love for authentic storytelling, our studio has spent over{' '}
-          <strong style={{ color: 'var(--white)', fontWeight: 500 }}>8 years</strong> capturing the extraordinary within the ordinary.
+          <strong style={{ color: 'var(--white)', fontWeight: 500 }}>5 years</strong> capturing the extraordinary within the ordinary.
           <br /><br />
-          From intimate portraits to grand commercial productions, we bring the same dedication to craft — meticulous preparation, sharp instincts, and an eye trained to find beauty in every frame.
+          From intimate portraits to grand wedding events, we bring the same dedication to craft — meticulous preparation, sharp instincts, and an eye trained to find beauty in every frame.
         </p>
         <div style={s.stats}>
           {stats.map(({ num, label }) => (
