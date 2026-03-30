@@ -1,5 +1,5 @@
-import aboutMain from '../images/about-main.JPG';
-import aboutAccent from '../images/about-accent.JPG';
+import aboutMain from '../images/about-main.webp';
+import aboutAccent from '../images/about-accent.webp';
 
 const s = {
   section: {

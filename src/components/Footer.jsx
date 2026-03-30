@@ -14,13 +14,13 @@ const s = {
   },
 };
 
-const socials = ['Instagram', 'Behance', 'LinkedIn'];
+const socials = ['Instagram', 'Facebook'];
 
 export default function Footer() {
   return (
     <footer style={s.footer}>
-      <div style={s.logo}>LENZ<span style={s.logoSpan}>.</span></div>
-      <p style={s.copy}>© 2025 LENZ Studio. All rights reserved.</p>
+      <div style={s.logo}>Heeswar Photography<span style={s.logoSpan}>.</span></div>
+      <p style={s.copy}>© 2025 Heeswar Photography. All rights reserved.</p>
       <div style={s.socials}>
         {socials.map(name => (
           <a

@@ -1,5 +1,5 @@
-import hero1 from '../images/hero1.JPG';
-import hero2 from '../images/hero2.JPG';
+import hero1 from '../images/hero1.webp';
+import hero2 from '../images/hero2.webp';
 
 
 const s = {

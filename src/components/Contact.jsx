@@ -31,7 +31,7 @@ const contactItems = [
         <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.07 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 2.97 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16.92z"/>
       </svg>
     ),
-    label: 'Phone', value: '+91 98765 43210',
+    label: 'Phone', value: '+91 7010917677',
   },
   {
     icon: (
@@ -40,7 +40,7 @@ const contactItems = [
         <polyline points="22,6 12,13 2,6"/>
       </svg>
     ),
-    label: 'Email', value: 'hello@lenzstudio.in',
+    label: 'Email', value: 'heeswarphotography@gmail.com',
   },
   {
     icon: (
@@ -48,7 +48,7 @@ const contactItems = [
         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
       </svg>
     ),
-    label: 'Studio', value: 'Mumbai, Maharashtra, India',
+    label: 'Location', value: '1/5 EVR Periyar 1st Cross Street, Ambal Nagar, Ramapuram, Chennai - 600089',
   },
 ];
 
@@ -105,6 +105,15 @@ export default function Contact() {
           </div>
         </div>
         <div style={s.group}>
+          <label style={s.label2}>Mobile Number</label>
+          <input
+            type="tel" placeholder="+91 00000 00000" required style={s.field}
+            pattern="[0-9]{10}"
+            onFocus={e => e.target.style.borderColor = 'var(--gold)'}
+            onBlur={e => e.target.style.borderColor = 'rgba(255,255,255,0.08)'}
+          />
+       </div>
+        <div style={s.group}>
           <label style={s.label2}>Service Required</label>
           <select
             style={{ ...s.field, appearance: 'none' }}
@@ -112,19 +121,29 @@ export default function Contact() {
             onBlur={e => e.target.style.borderColor = 'rgba(255,255,255,0.08)'}
           >
             <option value="">Select a service…</option>
-            {['Portrait Sessions','Wedding & Events','Product & Commercial','Editorial & Fashion','Architecture & Interiors','Corporate & Brand'].map(o => (
+            {['Wedding & Reception','Portrait Sessions','Birthday & Traditional Events','Pre / Post Wedding','Kids / Couple Outdoor Shoot'].map(o => (
               <option key={o} style={{ background: 'var(--charcoal)' }}>{o}</option>
             ))}
           </select>
         </div>
+        <div style={s.formRow}>
         <div style={s.group}>
-          <label style={s.label2}>Preferred Date</label>
+          <label style={s.label2}>Event Start Date</label>
           <input
             type="date" style={s.field}
             onFocus={e => e.target.style.borderColor = 'var(--gold)'}
             onBlur={e => e.target.style.borderColor = 'rgba(255,255,255,0.08)'}
           />
         </div>
+        <div style={s.group}>
+          <label style={s.label2}>Event End Date</label>
+          <input
+            type="date" style={s.field}
+            onFocus={e => e.target.style.borderColor = 'var(--gold)'}
+            onBlur={e => e.target.style.borderColor = 'rgba(255,255,255,0.08)'}
+          />
+        </div>
+      </div>
         <div style={s.group}>
           <label style={s.label2}>Tell Us More</label>
           <textarea
