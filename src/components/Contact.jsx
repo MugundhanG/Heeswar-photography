@@ -1,3 +1,4 @@
+import emailjs from '@emailjs/browser';
 import { useState } from 'react';
 
 const s = {
@@ -54,11 +55,75 @@ const contactItems = [
 
 export default function Contact() {
   const [status, setStatus] = useState('idle');
+  const [errorMsg, setErrorMsg] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setStatus('sent');
-    setTimeout(() => { setStatus('idle'); e.target.reset(); }, 3000);
+  const name        = form.from_name.value.trim();
+  const mobile      = form.mobile.value.trim();
+  const email       = form.from_email.value.trim();
+  const startDate   = form.start_date.value;
+  const endDate     = form.end_date.value;
+  const location    = form.event_location.value.trim();
+
+  // Check empty fields
+  if (!name || !mobile || !email || !startDate || !endDate || !location) {
+    setStatus('error');
+    setErrorMsg('Please fill all required fields.');
+    return;
+  }
+
+  // Validate phone number (10 digits)
+  const phoneRegex = /^[6-9]\d{9}$/;
+  if (!phoneRegex.test(mobile)) {
+    setStatus('error');
+    setErrorMsg('Enter a valid 10-digit Indian mobile number.');
+    return;
+  }
+
+  // Validate email
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    setStatus('error');
+    setErrorMsg('Enter a valid email address.');
+    return;
+  }
+
+  // Validate end date not before start date
+  if (new Date(endDate) < new Date(startDate)) {
+    setStatus('error');
+    setErrorMsg('Event end date cannot be before start date.');
+    return;
+  }
+
+    setStatus('sending');
+    setErrorMsg('');
+
+    emailjs.sendForm(
+      'service_oa7dem7',
+      'template_0ze4u0l',
+      form,
+      'bzMhA5rMUWDug50i0'
+    ).then(() => {
+      emailjs.send(
+        'service_oa7dem7',
+        'template_io7stkf',
+        {
+          from_name:  form.from_name.value,
+          from_email: form.from_email.value,  
+          service:    form.service.value,
+          start_date: form.start_date.value,
+          end_date:   form.end_date.value,
+          event_location: form.event_location.value,
+        },
+        'bzMhA5rMUWDug50i0'
+      );
+      setStatus('sent');
+      setTimeout(() => { setStatus('idle'); form.reset(); }, 3000);
+    }).catch(() => {
+      setStatus('error');
+      setTimeout(() => setStatus('idle'), 3000);
+    });
   };
 
   const fieldStyle = (focused) => ({
@@ -90,7 +155,7 @@ export default function Contact() {
           <div style={s.group}>
             <label style={s.label2}>Full Name</label>
             <input
-              type="text" placeholder="Your name" required style={s.field}
+              type="text" name="from_name" placeholder="Your name" required style={s.field}
               onFocus={e => e.target.style.borderColor = 'var(--gold)'}
               onBlur={e => e.target.style.borderColor = 'rgba(255,255,255,0.08)'}
             />
@@ -98,7 +163,7 @@ export default function Contact() {
           <div style={s.group}>
             <label style={s.label2}>Email Address</label>
             <input
-              type="email" placeholder="your@email.com" required style={s.field}
+              type="email" name="from_email" placeholder="your@email.com" required style={s.field}
               onFocus={e => e.target.style.borderColor = 'var(--gold)'}
               onBlur={e => e.target.style.borderColor = 'rgba(255,255,255,0.08)'}
             />
@@ -107,7 +172,7 @@ export default function Contact() {
         <div style={s.group}>
           <label style={s.label2}>Mobile Number</label>
           <input
-            type="tel" placeholder="+91 00000 00000" required style={s.field}
+            type="tel" name="mobile" placeholder="+91 00000 00000" required style={s.field}
             pattern="[0-9]{10}"
             onFocus={e => e.target.style.borderColor = 'var(--gold)'}
             onBlur={e => e.target.style.borderColor = 'rgba(255,255,255,0.08)'}
@@ -116,6 +181,7 @@ export default function Contact() {
         <div style={s.group}>
           <label style={s.label2}>Service Required</label>
           <select
+            name="service"
             style={{ ...s.field, appearance: 'none' }}
             onFocus={e => e.target.style.borderColor = 'var(--gold)'}
             onBlur={e => e.target.style.borderColor = 'rgba(255,255,255,0.08)'}
@@ -127,32 +193,48 @@ export default function Contact() {
           </select>
         </div>
         <div style={s.formRow}>
+          <div style={s.group}>
+            <label style={s.label2}>Event Start Date</label>
+            <input
+              type="date" name="start_date" style={s.field}
+              onFocus={e => e.target.style.borderColor = 'var(--gold)'}
+              onBlur={e => e.target.style.borderColor = 'rgba(255,255,255,0.08)'}
+            />
+          </div>
+          <div style={s.group}>
+            <label style={s.label2}>Event End Date</label>
+            <input
+              type="date" name="end_date" style={s.field}
+              onFocus={e => e.target.style.borderColor = 'var(--gold)'}
+              onBlur={e => e.target.style.borderColor = 'rgba(255,255,255,0.08)'}
+            />
+          </div>
+        </div>
         <div style={s.group}>
-          <label style={s.label2}>Event Start Date</label>
+          <label style={s.label2}>Event Location</label>
           <input
-            type="date" style={s.field}
+            type="text" name="event_location"
+            placeholder="City, State (e.g. Chennai, Tamil Nadu)"
+            style={s.field}
             onFocus={e => e.target.style.borderColor = 'var(--gold)'}
             onBlur={e => e.target.style.borderColor = 'rgba(255,255,255,0.08)'}
           />
         </div>
-        <div style={s.group}>
-          <label style={s.label2}>Event End Date</label>
-          <input
-            type="date" style={s.field}
-            onFocus={e => e.target.style.borderColor = 'var(--gold)'}
-            onBlur={e => e.target.style.borderColor = 'rgba(255,255,255,0.08)'}
-          />
-        </div>
-      </div>
         <div style={s.group}>
           <label style={s.label2}>Tell Us More</label>
           <textarea
             rows={5} placeholder="Describe your project, vision, or any specific requirements…"
+            name="message"
             style={{ ...s.field, resize: 'none' }}
             onFocus={e => e.target.style.borderColor = 'var(--gold)'}
             onBlur={e => e.target.style.borderColor = 'rgba(255,255,255,0.08)'}
           />
         </div>
+        {status === 'error' && (
+          <p style={{ color: '#ff4d4d', fontSize: '0.8rem', letterSpacing: '0.1em', marginBottom: 8 }}>
+            ⚠ {errorMsg}
+          </p>
+        )}
         <button
           type="submit"
           style={{
