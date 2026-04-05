@@ -58,3 +58,34 @@ button {
   0%, 100% { opacity: 1; }
   50%       { opacity: 0.3; }
 }
+
+@media (max-width: 768px) {
+  nav {
+    padding: 16px 24px !important;
+  }
+
+  #home {
+    grid-template-columns: 1fr !important;
+  }
+
+  #about {
+    grid-template-columns: 1fr !important;
+    padding: 60px 24px !important;
+  }
+
+  #services {
+    padding: 60px 24px !important;
+  }
+
+  #contact {
+    grid-template-columns: 1fr !important;
+    padding: 60px 24px !important;
+  }
+
+  footer {
+    flex-direction: column !important;
+    gap: 16px !important;
+    text-align: center !important;
+    padding: 32px 24px !important;
+  }
+}

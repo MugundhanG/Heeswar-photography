@@ -6,10 +6,12 @@ const s = {
   section: {
     height: '100vh', display: 'grid', gridTemplateColumns: '1fr 1fr',
     position: 'relative', overflow: 'hidden',
+    gridTemplateColumns: window.innerWidth <= 768 ? '1fr' : '1fr 1fr',
   },
   left: {
     display: 'flex', flexDirection: 'column', justifyContent: 'flex-end',
     padding: '0 60px 80px', zIndex: 2, position: 'relative',
+    zIndex: 2, position: 'relative',
   },
   label: {
     fontFamily: 'var(--font-body)', fontSize: '0.7rem',
@@ -19,7 +21,7 @@ const s = {
   },
   title: {
     fontFamily: 'var(--font-display)',
-    fontSize: 'clamp(4rem, 8vw, 9rem)',
+    fontSize: 'clamp(2rem, 6vw, 9rem)',
     lineHeight: 0.92, letterSpacing: '0.02em', color: 'var(--white)',
     opacity: 0, animation: 'fadeUp 1s 0.5s forwards',
   },
