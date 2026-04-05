@@ -96,14 +96,14 @@ const s = {
     textTransform: 'uppercase', color: 'var(--white)', textDecoration: 'none',
     borderBottom: '1px solid var(--gold)', paddingBottom: 4, transition: 'color 0.3s',
   },
-  grid: { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 2 },
-  wrapper: { maxWidth: '66.66%', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 2, marginTop: 2 },
+  grid: { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 2 },
+  wrapper: { maxWidth: '66.66%', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 2, marginTop: 2 },
 };
 
 export default function Services() {
   return (
     <section id="services" style={s.section}>
-      <div style={s.header}>
+      <div style={s.header} className="services-header">
         <div>
           <p style={s.label}>✦ What We Offer</p>
           <h2 style={s.title}>Our<br /><em style={s.titleEm}>Services</em></h2>
@@ -117,10 +117,10 @@ export default function Services() {
           Get a Custom Quote →
         </a>
       </div>
-      <div style={s.grid}>
+      <div style={s.grid} className="services-grid">
         {services.slice(0, 3).map(svc => <ServiceCard key={svc.num} {...svc} />)}
       </div>
-      <div style={s.wrapper}>
+      <div style={s.wrapper} className="services-wrapper">
         {services.slice(3).map(svc => <ServiceCard key={svc.num} {...svc} />)}
       </div>
     </section>

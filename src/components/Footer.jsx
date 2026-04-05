@@ -20,7 +20,7 @@ export default function Footer() {
   return (
     <footer style={s.footer}>
       <div style={s.logo}>Heeswar Photography<span style={s.logoSpan}>.</span></div>
-      <p style={s.copy}>© 2025 Heeswar Photography. All rights reserved.</p>
+      <p style={s.copy}>© 2026 Heeswar Photography. All rights reserved.</p>
       <div style={s.socials}>
         {socials.map(name => (
           <a

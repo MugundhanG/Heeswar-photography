@@ -6,12 +6,12 @@ const s = {
   section: {
     height: '100vh', display: 'grid', gridTemplateColumns: '1fr 1fr',
     position: 'relative', overflow: 'hidden',
-    gridTemplateColumns: window.innerWidth <= 768 ? '1fr' : '1fr 1fr',
+    // gridTemplateColumns: window.innerWidth <= 768 ? '1fr' : '1fr 1fr',
   },
   left: {
     display: 'flex', flexDirection: 'column', justifyContent: 'flex-end',
-    padding: '0 60px 80px', zIndex: 2, position: 'relative',
-    zIndex: 2, position: 'relative',
+    padding: '0 60px 80px', zIndex: 2, position: 'relative', minHeight: '100vh',
+    // zIndex: 2, position: 'relative',
   },
   label: {
     fontFamily: 'var(--font-body)', fontSize: '0.7rem',
