@@ -291,7 +291,7 @@ export default function Contact() {
           <input
             type="tel"
             name="mobile"
-            placeholder="+91 00000 00000"
+            placeholder="98765 43210"
             style={s.field}
             onFocus={e => e.target.style.borderColor = 'var(--gold)'}
             onBlur={e => {
