@@ -15,7 +15,7 @@ const s = {
   itemStrong: { display: 'block', fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--grey)', marginBottom: 4 },
   itemSpan: { fontSize: '0.95rem', color: 'var(--white)' },
   form: { display: 'flex', flexDirection: 'column', gap: 20 },
-  formRow: { display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 },
+  formRow: { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 20 },
   group: { display: 'flex', flexDirection: 'column', gap: 8 },
   label2: { fontSize: '0.65rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--grey)' },
   field: {
@@ -49,7 +49,7 @@ const contactItems = [
         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
       </svg>
     ),
-    label: 'Location', value: '1/6 EVR Periyar 1st Cross Street, Ambal Nagar, Ramapuram, Chennai - 600089',
+    label: 'Location', value: '1/5 EVR Periyar 1st Cross Street, Ambal Nagar, Ramapuram, Chennai - 600089',
   },
 ];
 

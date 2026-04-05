@@ -43,7 +43,7 @@ const s = {
   },
   text: { marginTop: 32, fontSize: '0.95rem', lineHeight: 1.9, color: 'var(--grey)', maxWidth: 480 },
   stats: {
-    display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 32,
+    display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(100px, 1fr))', gap: 32,
     marginTop: 56, paddingTop: 48, borderTop: '1px solid rgba(255,255,255,0.08)',
   },
   statNum: { fontFamily: 'var(--font-display)', fontSize: '2.8rem', color: 'var(--gold)', lineHeight: 1 },

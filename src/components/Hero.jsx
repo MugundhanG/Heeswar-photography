@@ -21,7 +21,7 @@ const s = {
   },
   title: {
     fontFamily: 'var(--font-display)',
-    fontSize: 'clamp(2rem, 6vw, 9rem)',
+    fontSize: 'clamp(2.2rem, 5vw, 9rem)',
     lineHeight: 0.92, letterSpacing: '0.02em', color: 'var(--white)',
     opacity: 0, animation: 'fadeUp 1s 0.5s forwards',
   },

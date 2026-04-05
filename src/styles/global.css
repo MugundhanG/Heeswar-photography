@@ -59,9 +59,33 @@ button {
   50%       { opacity: 0.3; }
 }
 
+/* ── RESPONSIVE ── */
+
+/* Large tablets */
+@media (max-width: 1024px) {
+  #about {
+    grid-template-columns: 1fr !important;
+    padding: 80px 40px !important;
+  }
+
+  #services {
+    padding: 80px 40px !important;
+  }
+
+  #contact {
+    grid-template-columns: 1fr !important;
+    padding: 80px 40px !important;
+  }
+}
+
+/* Tablets */
 @media (max-width: 768px) {
   nav {
     padding: 16px 24px !important;
+  }
+
+  .nav-links {
+    display: none !important;
   }
 
   #home {
@@ -71,6 +95,7 @@ button {
   #about {
     grid-template-columns: 1fr !important;
     padding: 60px 24px !important;
+    gap: 40px !important;
   }
 
   #services {
@@ -80,6 +105,7 @@ button {
   #contact {
     grid-template-columns: 1fr !important;
     padding: 60px 24px !important;
+    gap: 40px !important;
   }
 
   footer {
@@ -87,5 +113,35 @@ button {
     gap: 16px !important;
     text-align: center !important;
     padding: 32px 24px !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  nav {
+    padding: 14px 16px !important;
+  }
+
+  #home {
+    grid-template-columns: 1fr !important;
+  }
+
+  #about {
+    padding: 48px 16px !important;
+    gap: 32px !important;
+  }
+
+  #services {
+    padding: 48px 16px !important;
+  }
+
+  #contact {
+    padding: 48px 16px !important;
+    gap: 32px !important;
+  }
+
+  footer {
+    padding: 24px 16px !important;
+    gap: 12px !important;
   }
 }

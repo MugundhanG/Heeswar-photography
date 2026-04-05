@@ -96,7 +96,7 @@ const s = {
     textTransform: 'uppercase', color: 'var(--white)', textDecoration: 'none',
     borderBottom: '1px solid var(--gold)', paddingBottom: 4, transition: 'color 0.3s',
   },
-  grid: { display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 2, },
+  grid: { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 2 },
   wrapper: { maxWidth: '66.66%', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 2, marginTop: 2 },
 };
 
