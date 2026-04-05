@@ -1,4 +1,4 @@
-# LENZ Studio — Photography Website
+# Heeswar Photography — Photography Website
 
 A bold, professional photography business website built with React JS.
 
@@ -16,7 +16,7 @@ lenz-studio/
 │   │   ├── Ticker.jsx        # Scrolling services ticker
 │   │   ├── About.jsx         # Studio story + stats
 │   │   ├── GalleryStrip.jsx  # Auto-scrolling gallery
-│   │   ├── Services.jsx      # 6 service cards with pricing
+│   │   ├── Services.jsx      # 5 service cards with pricing
 │   │   ├── Contact.jsx       # Enquiry form + contact info
 │   │   └── Footer.jsx        # Footer with social links
 │   ├── styles/
@@ -81,7 +81,7 @@ npm install --save-dev gh-pages
 
 Add to `package.json`:
 ```json
-"homepage": "https://yourusername.github.io/lenz-studio",
+"homepage": "https://mugundhang.github.io/Heeswar-photography",
 "scripts": {
   "predeploy": "npm run build",
   "deploy": "gh-pages -d build"
