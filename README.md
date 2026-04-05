@@ -5,7 +5,7 @@ A bold, professional photography business website built with React JS.
 ## 📁 Project Structure
 
 ```
-lenz-studio/
+Heeswar-photography/
 ├── public/
 │   └── index.html
 ├── src/
