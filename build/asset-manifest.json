@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Heeswar-photography/static/css/main.16829f33.css",
-    "main.js": "/Heeswar-photography/static/js/main.21812432.js",
+    "main.css": "/Heeswar-photography/static/css/main.6e4716db.css",
+    "main.js": "/Heeswar-photography/static/js/main.7047aebf.js",
     "static/media/prewedding.webp": "/Heeswar-photography/static/media/prewedding.3e22b3d9659a10a3f541.webp",
     "static/media/reception.webp": "/Heeswar-photography/static/media/reception.c721cca56759c00400e5.webp",
     "static/media/hero1.webp": "/Heeswar-photography/static/media/hero1.9bf1637902297cc522e6.webp",
@@ -16,11 +16,11 @@
     "static/media/events.webp": "/Heeswar-photography/static/media/events.c763586f9603de309796.webp",
     "static/media/about-accent.webp": "/Heeswar-photography/static/media/about-accent.ecefd818cc3b9a1054d2.webp",
     "index.html": "/Heeswar-photography/index.html",
-    "main.16829f33.css.map": "/Heeswar-photography/static/css/main.16829f33.css.map",
-    "main.21812432.js.map": "/Heeswar-photography/static/js/main.21812432.js.map"
+    "main.6e4716db.css.map": "/Heeswar-photography/static/css/main.6e4716db.css.map",
+    "main.7047aebf.js.map": "/Heeswar-photography/static/js/main.7047aebf.js.map"
   },
   "entrypoints": [
-    "static/css/main.16829f33.css",
-    "static/js/main.21812432.js"
+    "static/css/main.6e4716db.css",
+    "static/js/main.7047aebf.js"
   ]
 }
