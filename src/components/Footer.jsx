@@ -14,7 +14,7 @@ const s = {
   },
 };
 
-const socials = ['Instagram', 'Facebook'];
+const socials = ['Instagram'];
 
 export default function Footer() {
   return (
@@ -25,7 +25,7 @@ export default function Footer() {
         {socials.map(name => (
           <a
             key={name}
-            href="#"
+            href="https://www.instagram.com/heeswar_photography?igsh=MXh4YW5id3lpZ2F5dA=="
             style={s.link}
             onMouseEnter={e => e.target.style.color = 'var(--gold)'}
             onMouseLeave={e => e.target.style.color = 'var(--grey)'}

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 80" width="400" height="80">
+  <!-- Minimal watermark version - designed to overlay on photos -->
+
+  <!-- Small lens -->
+  <g transform="translate(25, 40)">
+    <circle cx="0" cy="0" r="16" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.7"/>
+    <circle cx="0" cy="0" r="11" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.7"/>
+    <circle cx="0" cy="0" r="3" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+  <!-- HEESWAR -->
+  <text x="52" y="44" font-family="'Didot', 'Playfair Display', 'Georgia', serif" font-size="28" font-weight="400" letter-spacing="8" fill="#ffffff" opacity="0.7" text-anchor="start">HEESWAR</text>
+
+  <!-- Thin separator -->
+  <line x1="52" y1="52" x2="310" y2="52" stroke="#ffffff" stroke-width="0.5" opacity="0.5"/>
+
+  <!-- PHOTOGRAPHY -->
+  <text x="180" y="68" font-family="'Montserrat', 'Helvetica Neue', 'Arial', sans-serif" font-size="10" font-weight="300" letter-spacing="8" fill="#ffffff" opacity="0.5" text-anchor="middle">PHOTOGRAPHY</text>
+</svg>
