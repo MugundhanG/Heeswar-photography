@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/Heeswar-photography/static/css/main.6e4716db.css",
+    "main.js": "/Heeswar-photography/static/js/main.06632e4b.js",
+    "static/media/prewedding.webp": "/Heeswar-photography/static/media/prewedding.3e22b3d9659a10a3f541.webp",
+    "static/media/hero2.webp": "/Heeswar-photography/static/media/hero2.cb98139c9635c493e676.webp",
+    "static/media/reception.webp": "/Heeswar-photography/static/media/reception.c721cca56759c00400e5.webp",
+    "static/media/hero1.webp": "/Heeswar-photography/static/media/hero1.9bf1637902297cc522e6.webp",
+    "static/media/birthday.webp": "/Heeswar-photography/static/media/birthday.4e4da6ae9970f1f1904f.webp",
+    "static/media/wedding.webp": "/Heeswar-photography/static/media/wedding.2a9bb4826435e0cce4db.webp",
+    "static/media/about-main.webp": "/Heeswar-photography/static/media/about-main.7a51d7a57c70c2b212e7.webp",
+    "static/media/portraits.webp": "/Heeswar-photography/static/media/portraits.e264c124d3982826fb77.webp",
+    "static/media/kidsoutdoor.webp": "/Heeswar-photography/static/media/kidsoutdoor.ea8c2728152347db8da2.webp",
+    "static/media/coupleoutdoor.webp": "/Heeswar-photography/static/media/coupleoutdoor.662357060dc0ba5e0d21.webp",
+    "static/media/postwedding.webp": "/Heeswar-photography/static/media/postwedding.0c79f7939619b1566960.webp",
+    "static/media/events.webp": "/Heeswar-photography/static/media/events.c763586f9603de309796.webp",
+    "static/media/about-accent.webp": "/Heeswar-photography/static/media/about-accent.ecefd818cc3b9a1054d2.webp",
+    "index.html": "/Heeswar-photography/index.html",
+    "main.6e4716db.css.map": "/Heeswar-photography/static/css/main.6e4716db.css.map",
+    "main.06632e4b.js.map": "/Heeswar-photography/static/js/main.06632e4b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6e4716db.css",
+    "static/js/main.06632e4b.js"
+  ]
+}

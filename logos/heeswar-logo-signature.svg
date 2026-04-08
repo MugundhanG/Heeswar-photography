@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 220" width="600" height="220">
+  <defs>
+    <linearGradient id="goldSig" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#B8962E;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#E8D48B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B8962E;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Signature-style "Heeswar" with script feel -->
+  <text x="300" y="110" font-family="'Brush Script MT', 'Segoe Script', 'Dancing Script', cursive" font-size="72" fill="#1a1a1a" text-anchor="middle" font-style="italic">Heeswar</text>
+
+  <!-- Underline flourish -->
+  <path d="M120,125 Q200,140 300,125 Q400,110 480,125" fill="none" stroke="url(#goldSig)" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Small lens icon between words -->
+  <g transform="translate(300, 160)">
+    <circle cx="0" cy="0" r="8" fill="none" stroke="#1a1a1a" stroke-width="1.2"/>
+    <circle cx="0" cy="0" r="5" fill="none" stroke="#1a1a1a" stroke-width="0.8"/>
+    <circle cx="0" cy="0" r="1.5" fill="#1a1a1a"/>
+  </g>
+
+  <!-- PHOTOGRAPHY -->
+  <text x="300" y="190" font-family="'Montserrat', 'Helvetica Neue', 'Arial', sans-serif" font-size="15" font-weight="300" letter-spacing="12" fill="#888888" text-anchor="middle">PHOTOGRAPHY</text>
+</svg>
