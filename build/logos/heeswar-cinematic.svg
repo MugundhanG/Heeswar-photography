@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 280" width="700" height="280">
+  <defs>
+    <linearGradient id="goldCine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8B7225;stop-opacity:0" />
+      <stop offset="20%" style="stop-color:#C9A94E;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#E8D48B;stop-opacity:1" />
+      <stop offset="80%" style="stop-color:#C9A94E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8B7225;stop-opacity:0" />
+    </linearGradient>
+    <radialGradient id="spotlight" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" style="stop-color:#1a1a1a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#050505;stop-opacity:1" />
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Cinematic dark background with vignette -->
+  <rect width="700" height="280" fill="url(#spotlight)"/>
+
+  <!-- Top gold line -->
+  <line x1="100" y1="60" x2="600" y2="60" stroke="url(#goldCine)" stroke-width="0.8"/>
+
+  <!-- Refined lens icon -->
+  <g transform="translate(350, 120)" filter="url(#glow)">
+    <circle cx="0" cy="0" r="22" fill="none" stroke="#C9A94E" stroke-width="1.5" opacity="0.6"/>
+    <circle cx="0" cy="0" r="15" fill="none" stroke="#E8D48B" stroke-width="1" opacity="0.4"/>
+    <!-- Aperture lines -->
+    <line x1="-10" y1="-12" x2="5" y2="-5" stroke="#E8D48B" stroke-width="0.8" opacity="0.5"/>
+    <line x1="10" y1="-12" x2="5" y2="5" stroke="#E8D48B" stroke-width="0.8" opacity="0.5"/>
+    <line x1="12" y1="5" x2="-5" y2="8" stroke="#E8D48B" stroke-width="0.8" opacity="0.5"/>
+    <line x1="-5" y1="12" x2="-8" y2="-3" stroke="#E8D48B" stroke-width="0.8" opacity="0.5"/>
+    <circle cx="0" cy="0" r="4" fill="#C9A94E" opacity="0.3"/>
+  </g>
+
+  <!-- HEESWAR - cinematic typography -->
+  <text x="350" y="185" font-family="'Didot', 'Playfair Display', 'Georgia', serif" font-size="56" font-weight="400" letter-spacing="18" fill="#f0f0f0" text-anchor="middle" filter="url(#glow)">HEESWAR</text>
+
+  <!-- Gold divider -->
+  <line x1="150" y1="200" x2="550" y2="200" stroke="url(#goldCine)" stroke-width="1"/>
+
+  <!-- PHOTOGRAPHY -->
+  <text x="350" y="228" font-family="'Montserrat', 'Helvetica Neue', 'Arial', sans-serif" font-size="14" font-weight="300" letter-spacing="14" fill="#C9A94E" text-anchor="middle">PHOTOGRAPHY</text>
+
+  <!-- Bottom gold line -->
+  <line x1="100" y1="248" x2="600" y2="248" stroke="url(#goldCine)" stroke-width="0.8"/>
+</svg>

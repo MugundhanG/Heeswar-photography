@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200" width="600" height="200">
+  <defs>
+    <linearGradient id="goldAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#C9A94E;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#E8D48B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#C9A94E;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Camera Lens Element - subtle aperture icon -->
+  <g transform="translate(56, 100)">
+    <!-- Outer ring -->
+    <circle cx="0" cy="0" r="38" fill="none" stroke="#1a1a1a" stroke-width="2.5"/>
+    <!-- Inner ring -->
+    <circle cx="0" cy="0" r="28" fill="none" stroke="#1a1a1a" stroke-width="1.5"/>
+    <!-- Aperture blades -->
+    <path d="M0,-28 L8,-12 L-8,-12 Z" fill="#1a1a1a" opacity="0.8" transform="rotate(0)"/>
+    <path d="M0,-28 L8,-12 L-8,-12 Z" fill="#1a1a1a" opacity="0.8" transform="rotate(60)"/>
+    <path d="M0,-28 L8,-12 L-8,-12 Z" fill="#1a1a1a" opacity="0.8" transform="rotate(120)"/>
+    <path d="M0,-28 L8,-12 L-8,-12 Z" fill="#1a1a1a" opacity="0.8" transform="rotate(180)"/>
+    <path d="M0,-28 L8,-12 L-8,-12 Z" fill="#1a1a1a" opacity="0.8" transform="rotate(240)"/>
+    <path d="M0,-28 L8,-12 L-8,-12 Z" fill="#1a1a1a" opacity="0.8" transform="rotate(300)"/>
+    <!-- Center dot -->
+    <circle cx="0" cy="0" r="5" fill="#1a1a1a"/>
+  </g>
+
+  <!-- HEESWAR - Primary text -->
+  <text x="110" y="108" font-family="'Didot', 'Playfair Display', 'Georgia', serif" font-size="52" font-weight="400" letter-spacing="14" fill="#1a1a1a" text-anchor="start">HEESWAR</text>
+
+  <!-- Decorative line -->
+  <line x1="112" y1="122" x2="540" y2="122" stroke="url(#goldAccent)" stroke-width="1"/>
+
+  <!-- PHOTOGRAPHY - Secondary text -->
+  <text x="327" y="148" font-family="'Montserrat', 'Helvetica Neue', 'Arial', sans-serif" font-size="16" font-weight="300" letter-spacing="10" fill="#666666" text-anchor="middle">PHOTOGRAPHY</text>
+</svg>
